@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
+require('dotenv').config();
 
-const uri = "mongodb+srv://juniorsordi:8uOBu6yEtgEDwtfl@cluster0.kbxdten.mongodb.net?retryWrites=true&w=majority";
-const uri2 = "mongodb://127.0.0.1:27017";
+const uri = process.env.MONGO_CONNECTION_STRING;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 module.exports = client;
