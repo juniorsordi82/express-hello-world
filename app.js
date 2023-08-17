@@ -61,6 +61,10 @@ app.use('*', (req,res) => {
 });
 //*/
 
+app.use('/api/', require('./server/routes/authRoutes'));
+app.use('/api/v1/', require('./server/routes/empresaRoutes'));
+app.use('/api/v1/', require('./server/routes/financeiroRoutes'));
+
 var errorHandler = function (err, req, res, next) {
   console.error(err);
   res.status(422);
