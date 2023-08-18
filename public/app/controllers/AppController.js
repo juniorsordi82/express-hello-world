@@ -1,5 +1,5 @@
 app.controller("AppController", function ($scope, $rootScope, $routeParams, $window, $resource, $modal, $translate, $http) {
-    $scope.version = "1.0.1";
+    $scope.version = "2023 r35";
     $scope.form = {};
 
     $scope.loggedUser = {
@@ -12,9 +12,7 @@ app.controller("AppController", function ($scope, $rootScope, $routeParams, $win
     };
 
     $scope.initApp = function() {
-        $http.get("/api/auth/lastRevision").then(function (resp) {
-            $scope.version = resp.data.version;
-        })
+
     }
 
     $scope.teste1 = function() {
